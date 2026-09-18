@@ -30,7 +30,7 @@ class ParcelUpdate(BaseModel):
     status: Optional[ParcelStatus] = None
     delivery_address: Optional[str] = None
 
-# 1. Extended Listing (Search, Filter, Sort, Pagination)
+# ONLY ADMIN CAN ACCESS THIS ROUTE
 @router.get("/parcels")
 def list_parcels(
     search: Optional[str] = Query(None, description="Search by tracking ID or recipient name"),
